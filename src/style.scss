@@ -1,97 +1,74 @@
+@use 'style/variables' as var;
+@use 'style/mixins' as mix;
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-$colors: (
-    'dark-gray': #2d3436,
-    'medium-gray': #636e72,
-    'gray': #b2bec3,
-    'light-gray': #dfe6e9
-);
-
-$blue-nights: #353b48;
-$electro-magnetic: #2f3640;
-
-$blueberry-soda: #7f8fa6;
-$chain-gang-gray: #718093;
-
-$hint-of-pensive: #dcdde1;
-$lynx-white: #f5f6fa;
-
-$bg-primary: $lynx-white;
-$bg-secondary: $hint-of-pensive;
-
-$font-primary: $blue-nights;
-
 body {
-    background: $bg-primary;
-    color: $font-primary;
+    background: var.$bg-primary;
+    color: var.$font-primary;
     font-family: 'Montserrat', sans-serif;
 }
 
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 header {
-    background: $bg-secondary;
+    background: var.$bg-primary;
     width: 100wv;
-
-    .wrapper {
-        display: flex;
-        max-width: 1200px;
-        margin: 0 auto;
-        justify-content: space-between;
-        align-items: center;
-        gap: 5rem;
-    }
-
-    .gbn-logo {
-        width: 250px;
-        height: 250px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
-
-        img {
-            width: 100%;
-            height: 100%;
-        }
-    }
 
     .header-content {
         display: flex;
-        flex-direction: column;
-        gap: 1rem;
+        justify-content: space-between;
 
-        .contact {
-            font-size: 1.5rem;
+        .gbn-logo {
+            height: 100px;
             display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 4rem;
-            flex-wrap: wrap;
+            align-items: center;
+            flex-shrink: 0;
+            padding: 10px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
         }
 
-        nav {
-            display: flex;
+        .contact {
+            @include mix.flex-center;
+            font-size: 1.5rem;
+            gap: 4rem;
+            flex-grow: 1;
             flex-wrap: wrap;
-            gap: 1rem;
+        }
+    }
 
-            a {
-                display: block;
-                text-decoration: none;
-                font-size: 1.25rem;
-                color: $blueberry-soda;
-                background: $electro-magnetic;
-                padding: 0.5rem 1rem;
-                cursor: pointer;
-                border-radius: 3px;
+    nav {
+        background: var.$bg-secondary;
+        gap: 1rem;
 
-                &:hover {
-                    background: $blue-nights;
-                    box-shadow: 0 0 5px 0 $electro-magnetic;
-                    color: white;
-                }
+        .wrapper {
+            display: flex;
+        }
+
+        a {
+            @include mix.border-radius-min;
+            display: block;
+            text-decoration: none;
+            font-size: 1rem;
+            color: var.$font-secondary;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+
+            &:hover {
+                background: var.$bg-highlight;
+                // box-shadow: 0 0 5px 0 var.$electro-magnetic;
             }
         }
     }
