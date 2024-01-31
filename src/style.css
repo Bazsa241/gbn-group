@@ -8,6 +8,9 @@ body {
   background: #f5f6fa;
   color: #353b48;
   font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .wrapper {
@@ -18,6 +21,9 @@ body {
 header {
   background: #f5f6fa;
   width: 100wv;
+  box-shadow: 0 0 5px 0 #2f3640;
+  position: sticky;
+  top: 0;
 }
 header .header-content {
   display: flex;
@@ -44,22 +50,75 @@ header .header-content .contact {
   flex-grow: 1;
   flex-wrap: wrap;
 }
-header nav {
-  background: #2f3640;
-  gap: 1rem;
-}
-header nav .wrapper {
+
+main .wrapper {
   display: flex;
+  flex-direction: column;
+  gap: 8rem;
 }
-header nav a {
-  border-radius: 3px;
-  display: block;
-  text-decoration: none;
-  font-size: 1rem;
+main .welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+main .welcome h1 {
+  background-color: #c23616;
   color: #f5f6fa;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+  text-align: center;
+  font-size: 3rem;
+  padding: 0.5rem 2rem;
 }
-header nav a:hover {
-  background: #c23616;
+main .welcome p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+main .services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+main .services h2 {
+  background-color: #c23616;
+  color: #f5f6fa;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+main .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 5rem;
+}
+main .card {
+  display: flex;
+  max-width: 60%;
+}
+main .card:nth-child(even) {
+  flex-direction: row-reverse;
+  align-self: end;
+}
+main .card .service-img {
+  min-width: 250px;
+  max-width: 250px;
+}
+main .card .service-img img {
+  max-width: 100%;
+  height: auto;
+}
+main .card .service-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+main .card .service-content h3 {
+  color: #c23616;
+  font-size: 1.5rem;
+}
+main .card .service-content p {
+  line-height: 1.5;
 }/*# sourceMappingURL=style.css.map */

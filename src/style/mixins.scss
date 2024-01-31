@@ -1,4 +1,4 @@
-@use 'variables';
+@use 'variables' as var;
 
 @mixin border-radius-min {
     border-radius: 3px;
@@ -8,4 +8,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin highlight {
+    background-color: var.$bg-highlight;
+    color: var.$font-secondary;
 }
