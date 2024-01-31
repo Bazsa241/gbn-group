@@ -10,60 +10,56 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-header {
-  background: #dcdde1;
-  width: 100wv;
-}
-header .wrapper {
-  display: flex;
+.wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  justify-content: space-between;
-  align-items: center;
-  gap: 5rem;
 }
-header .gbn-logo {
-  width: 250px;
-  height: 250px;
+
+header {
+  background: #f5f6fa;
+  width: 100wv;
+}
+header .header-content {
+  display: flex;
+  justify-content: space-between;
+}
+header .header-content .gbn-logo {
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  padding: 10px;
 }
-header .gbn-logo img {
+header .header-content .gbn-logo img {
   width: 100%;
   height: 100%;
 }
-header .header-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
 header .header-content .contact {
-  font-size: 1.5rem;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
   gap: 4rem;
+  flex-grow: 1;
   flex-wrap: wrap;
 }
-header .header-content nav {
-  display: flex;
-  flex-wrap: wrap;
+header nav {
+  background: #2f3640;
   gap: 1rem;
 }
-header .header-content nav a {
+header nav .wrapper {
+  display: flex;
+}
+header nav a {
+  border-radius: 3px;
   display: block;
   text-decoration: none;
-  font-size: 1.25rem;
-  color: #7f8fa6;
-  background: #2f3640;
+  font-size: 1rem;
+  color: #f5f6fa;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  border-radius: 3px;
 }
-header .header-content nav a:hover {
-  background: #353b48;
-  box-shadow: 0 0 5px 0 #2f3640;
-  color: white;
+header nav a:hover {
+  background: #c23616;
 }/*# sourceMappingURL=style.css.map */
