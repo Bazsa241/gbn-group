@@ -8,117 +8,292 @@ body {
   background: #f5f6fa;
   color: #353b48;
   font-family: "Montserrat", sans-serif;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
 }
 
-.wrapper {
+.wrapper-10 {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wrapper-12 {
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.wrapper-19 {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.emp {
+  color: #c23616;
+  font-weight: 700;
+}
+
+.hide {
+  display: none;
+}
+
+.fixed-scroll {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.email-trigger {
+  font-weight: 700;
+  border-bottom: 2px solid #c23616;
+}
+@media only screen and (max-width: 690px) {
+  .email-trigger {
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  header.header-down {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    bottom: 0;
+    gap: 1rem;
+    padding-bottom: 25vh;
+  }
+  header.header-down .header-content {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  header.header-down .header-content .gbn-logo {
+    height: 100px;
+  }
+  header.header-down .header-content .email,
+  header.header-down .header-content .mobile > div {
+    margin-top: 0.5rem;
+  }
+  header.header-down button.close {
+    display: block;
+    padding: 0.5rem 3rem;
+    background-color: inherit;
+    border-top: 1px solid #2f3640;
+    border-bottom: 1px solid #2f3640;
+    border-right: unset;
+    border-left: unset;
+    cursor: pointer;
+    font-size: 1.25rem;
+  }
+}
 header {
   background: #f5f6fa;
-  width: 100wv;
+  width: 100%;
   box-shadow: 0 0 5px 0 #2f3640;
   position: sticky;
   top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+header button.close {
+  display: none;
 }
 header .header-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 header .header-content .gbn-logo {
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  padding: 10px;
+  height: 80px;
+  width: auto;
+  padding: 8px;
 }
-header .header-content .gbn-logo img {
-  width: 100%;
-  height: 100%;
+@media only screen and (max-width: 410px) {
+  header .header-content .gbn-logo {
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  header .header-content .gbn-logo {
+    display: none;
+  }
 }
 header .header-content .contact {
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
-  gap: 4rem;
+  justify-content: flex-end;
+  font-size: 1.25rem;
+  gap: 2rem;
   flex-grow: 1;
   flex-wrap: wrap;
+  letter-spacing: 1px;
+  padding: 8px;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 690px) {
+  header .header-content .contact {
+    flex-direction: column-reverse;
+    gap: 0;
+    font-size: 1rem;
+  }
+}
+header .header-content .contact .email {
+  border-bottom: 1px solid #353b48;
+}
+header .header-content .contact .email-link {
+  text-decoration: none;
+  color: inherit;
+}
+header .header-content .contact .email:hover {
+  text-shadow: 5px 5px 4px rgba(47, 54, 64, 0.85);
+  scale: 105%;
+  transition: all 0.3s ease-in-out;
+}
+header .header-content .contact .email:hover .icon-at {
+  transform: rotate(-360deg);
+  transition: transform 0.3s ease-in-out;
+}
+header .header-content .icon {
+  color: #c23616;
+}
+header .header-content .icon-email {
+  transform: translateY(2px);
 }
 
-main .wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 8rem;
-}
 main .welcome {
+  background-image: url(./assets/welcome-2.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 4rem 0 4rem 0;
+}
+@media only screen and (max-width: 690px) {
+  main .welcome {
+    background: #718093;
+    padding: 0;
+  }
+}
+main .welcome-content {
+  border-radius: 3px;
+  box-shadow: 5px 5px 15px 0px rgba(47, 54, 64, 0.75);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
+  padding: 2rem 2rem 4rem 2rem;
+  background-color: rgba(245, 246, 250, 0.7);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+@media only screen and (max-width: 690px) {
+  main .welcome-content {
+    padding: 0;
+  }
 }
 main .welcome h1 {
-  background-color: #c23616;
-  color: #f5f6fa;
+  color: #c23616;
   text-align: center;
-  font-size: 3rem;
-  padding: 0.5rem 2rem;
+}
+@media only screen and (max-width: 690px) {
+  main .welcome .title-bg {
+    background-image: url(./assets/welcome-2.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 3rem 3rem;
+  }
+  main .welcome h1 {
+    text-shadow: 0px 0px 10px #f5f6fa;
+    background-color: rgba(245, 246, 250, 0.7);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    padding: 1rem 1rem;
+  }
 }
 main .welcome p {
-  font-size: 1.25rem;
+  text-align: justify;
   line-height: 1.5;
+  font-weight: 500;
 }
-main .services {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
+@media only screen and (max-width: 690px) {
+  main .welcome p {
+    padding: 0 1rem;
+  }
+  main .welcome p:last-child {
+    padding-bottom: 2rem;
+  }
 }
-main .services h2 {
-  background-color: #c23616;
-  color: #f5f6fa;
-  text-align: center;
-  padding: 0.5rem;
-  font-size: 2rem;
+
+@media (min-width: 691px) {
+  .shake {
+    display: inline-block;
+    animation-name: shake;
+    animation-duration: 2s;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+  }
+  .shake-delay {
+    display: inline-block;
+    animation-name: shake;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+  }
+  .roll {
+    animation-name: roll;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+  }
 }
-main .cards {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 0 5rem;
+@keyframes shake {
+  from {
+    scale: 100%;
+    transform: rotate(0);
+  }
+  12% {
+    scale: 110%;
+    transform: rotate(10deg);
+  }
+  25% {
+    scale: 110%;
+    transform: rotate(-10deg);
+  }
+  37% {
+    scale: 110%;
+    transform: rotate(10deg);
+  }
+  50% {
+    scale: 110%;
+    transform: rotate(-10deg);
+  }
+  62% {
+    scale: 110%;
+    transform: rotate(10deg);
+  }
+  75% {
+    scale: 110%;
+    transform: rotate(-10deg);
+  }
+  87% {
+    scale: 110%;
+    transform: rotate(10deg);
+  }
+  to {
+    scale: 100%;
+    transform: rotate(0);
+  }
 }
-main .card {
-  display: flex;
-  max-width: 60%;
-}
-main .card:nth-child(even) {
-  flex-direction: row-reverse;
-  align-self: end;
-}
-main .card .service-img {
-  min-width: 250px;
-  max-width: 250px;
-}
-main .card .service-img img {
-  max-width: 100%;
-  height: auto;
-}
-main .card .service-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 1rem;
-  text-align: center;
-}
-main .card .service-content h3 {
-  color: #c23616;
-  font-size: 1.5rem;
-}
-main .card .service-content p {
-  line-height: 1.5;
+@keyframes roll {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(0, -20px);
+  }
+  50% {
+    transform: translate(-180px, -20px) rotate(-400deg);
+  }
+  90% {
+    transform: translate(0, -20px) rotate(0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }/*# sourceMappingURL=style.css.map */
