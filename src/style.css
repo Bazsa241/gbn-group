@@ -320,6 +320,34 @@ main {
   }
 }
 
+.excavation article {
+  display: flex;
+}
+.excavation article:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.excavation article .excavation-image {
+  flex-grow: 1;
+  flex-basis: 50%;
+  background-image: url("./assets/pool-excavation-copy.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.excavation article .content {
+  flex-basis: 50%;
+  flex-grow: 1;
+  padding: 5rem 10vw;
+  text-align: center;
+}
+.excavation article h3 {
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+  color: #c23616;
+}
+.excavation article p {
+  line-height: 1.7;
+}
+
 footer {
   height: 50vh;
 }
