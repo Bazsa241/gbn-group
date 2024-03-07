@@ -34,12 +34,6 @@ body {
   display: none;
 }
 
-.fixed-scroll {
-  position: fixed;
-  overflow-y: scroll;
-  width: 100%;
-}
-
 .email-trigger {
   font-weight: 700;
   border-bottom: 2px solid #c23616;
@@ -68,6 +62,11 @@ body {
 }
 
 @media only screen and (max-width: 690px) {
+  .fixed-scroll {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+  }
   header.header-down {
     display: flex;
     flex-direction: column;
@@ -292,7 +291,7 @@ main {
     transform: translateY(-5rem);
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 690px) {
   .water-sewer .title-bg {
     flex-direction: column;
     align-items: center;
@@ -351,7 +350,7 @@ main {
     flex-direction: column;
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 690px) {
   .excavation .title-bg {
     flex-direction: column;
     align-items: center;
