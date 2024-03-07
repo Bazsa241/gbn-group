@@ -1,0 +1,32 @@
+@use 'variables' as var;
+
+@mixin border-radius-min {
+    border-radius: 3px;
+}
+
+@mixin border-radius-middle {
+    border-radius: 10px;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin highlight-bg {
+    background-color: var.$harley-davidson-orange;
+    color: var.$font-secondary;
+}
+
+@mixin highlight-font {
+    color: var.$harley-davidson-orange;
+}
+
+@mixin box-shadow-low {
+    box-shadow: 0 0 5px 0 rgba(var.$bg-secondary, 0.75);
+}
+
+@mixin box-shadow-middle {
+    box-shadow: 5px 5px 15px 0px rgba(var.$bg-secondary, 0.75);
+}

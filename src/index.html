@@ -5,36 +5,170 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="icon" type="image/x-icon" href="./assets/GBN-circle.svg" />
         <link rel="stylesheet" href="style.css" />
+        <script src="main.js" defer></script>
         <title>GBN Group Bau</title>
     </head>
     <body>
         <header>
-            <div class="wrapper">
-                <div class="gbn-logo">
-                    <img src="assets/gbn-logo.svg" alt="logo" />
-                </div>
-                <div class="header-content">
-                    <div class="contact">
-                        <div class="mobiles">
-                            <div>+36 30 1932 102</div>
-                            <div>+36 30 6112 112</div>
-                        </div>
-                        <div class="email">gbngroupkft@gmail.com</div>
+            <div class="header-content">
+                <img class="gbn-logo" src="assets/gbn-logo-color.svg" alt="logo" />
+                <div class="contact">
+                    <div class="email">
+                        <a class="email-link" href="mailto:gbngroupkft@gmail.com">
+                            <i class="fa-regular fa-envelope icon icon-email"></i>
+                            gbngroupkft
+                            <i class="fa-solid fa-at icon icon-at"> </i>
+                            gmail<span class="emp">.</span>com
+                        </a>
                     </div>
-                    <nav>
-                        <a href="/">Szolgáltatásaink</a>
-                        <a href="/">Referenciák</a>
-                        <a href="/">Gépi Földmunka</a>
-                        <a href="/">Közmű építés</a>
-                        <a href="/">Medence építés</a>
-                        <a href="/">Dugulás elhárítás</a>
-                        <a href="/">Csatorna Kamerázás</a>
-                        <a href="/">Kapcsolat</a>
-                    </nav>
+                    <div class="mobile">
+                        <div>
+                            <i class="fa-solid fa-mobile-screen-button icon"></i>
+                            +36 <span class="emp number-top">30</span> 6112 112
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-mobile-screen-button icon"></i>
+                            +36 <span class="emp number-bottom">30</span> 1932 102
+                        </div>
+                    </div>
                 </div>
             </div>
+            <button class="close"><i class="fa-solid fa-angles-up"></i></button>
         </header>
+
+        <main>
+            <section class="welcome">
+                <div class="main-title-bg">
+                    <h1>Üdvözöllek a GBN Group Bau Kft. honlapján!</h1>
+                </div>
+            </section>
+
+            <section class="description">
+                <h2 class="hide">Description</h2>
+                <div class="wrapper-10">
+                    <div class="description-content">
+                        <p>
+                            Cégünk professzionális gépi földmunka szolgáltatásokat kínál mind az otthoni kertek, mind a
+                            teljes építkezések terén. Küldetésünk, hogy ügyfeleinknek megkönnyítsük az építkezés vagy
+                            kertrendezés folyamatát, biztosítva a hatékony és precíz földmunkát, ami elengedhetetlen
+                            minden projekt sikeréhez.
+                        </p>
+                        <p>
+                            Szolgáltatásaink között szerepel a kerti területek előkészítése, a sávalap és pinceszint
+                            kiemelése, valamint a teljes körű építkezési előkészítés. (csatorna és vízvezeték hálózat
+                            teljes kiépítése, javítása) Tapasztalt és képzett csapatunk minden munkáját nagy
+                            precizitással végzi, garantálva a minőségi munkavégzést és az időbeni teljesítést.
+                        </p>
+                        <p>
+                            Az általunk kínált gépi földmunka szolgáltatások magukban foglalják a modern eszközök és
+                            gépek használatát, így biztosítva a hatékony és környezetbarát megoldásokat minden projekt
+                            során.
+                        </p>
+                        <p>
+                            Ha megbízható és professzionális földmunka szolgáltatást keresel, akkor ne habozz felvenni
+                            velünk a kapcsolatot! Kérj árajánlatot, vagy kérj további információkat szolgáltatásainkról
+                            az alábbi <span class="email-trigger">elérhetőségeinken</span>!
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="water-sewer">
+                <div class="title-bg">
+                    <h2>Csatorna- és vízvezeték-szolgáltatás</h2>
+                </div>
+                <div class="wrapper-10">
+                    <div class="services">
+                        <article class="service">
+                            <h3>Csatorna- és vízvezeték-építés</h3>
+                            <p>
+                                Teljes körű szolgáltatást nyújtunk a csatorna- és vízvezeték-hálózat tervezésétől kezdve
+                                az építésen és telepítésen át egészen a befejezésig, hogy az új rendszer tökéletesen
+                                illeszkedjen az igényeidhez és a helyi szabályozásokhoz.
+                            </p>
+                        </article>
+                        <article class="service">
+                            <h3>Javítás és karbantartás</h3>
+                            <p>
+                                Szakembereink gyorsan és hatékonyan hajtják végre a csatorna- és vízvezeték-rendszerek
+                                javítását és karbantartását, hogy megelőzzék a problémákat és megőrizzék a rendszer
+                                hosszú távú hatékonyságát.
+                            </p>
+                        </article>
+                        <article class="service">
+                            <h3>Csatornatisztítás és duguláselhárítás</h3>
+                            <p>
+                                Professzionális eszközökkel és technikákkal biztosítjuk a csatornák tisztítását és a
+                                dugulások hatékony elhárítását, hogy visszaállítsuk a normális vízelvezetést és
+                                megakadályozzuk a további problémákat.
+                            </p>
+                        </article>
+                        <article class="service">
+                            <h3>Csatornakamerázás</h3>
+                            <p>
+                                Modern csatornakamerák segítségével fel tudjuk fedezni a csatornarendszerekben
+                                előforduló problémákat és elzáródásokat, így pontos diagnózist állítva fel és hatékonyan
+                                kezelhetjük a helyzetet.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="excavation">
+                <div class="title-bg">
+                    <h2>Medence, sávalap, pinceszint ásás</h2>
+                </div>
+                <div class="wrapper-12">
+                    <div class="content">
+                        <article class="pool">
+                            <h3>Medence ásás</h3>
+                            <p>
+                                A medence ásás lényege, hogy a kívánt mélységű és formájú gödör kialakítása történik a
+                                medence tervezett helyén. Ezt általában gépi eszközökkel végezük, figyelembe véve a
+                                tervezési szempontokat és a talajviszonyokat. A precíz ásás elengedhetetlen a medence
+                                alapjának kialakításához, hogy az megfeleljen a terveknek és biztosítsa a stabil
+                                szerkezetet.
+                            </p>
+                        </article>
+                        <article class="base">
+                            <h3>Sávalap ásás</h3>
+                            <p>
+                                A sávalap ásás során a tervezett épület alapjának alatti területet mélyítik el, hogy
+                                helyet teremtsenek az alapnak. Ez a folyamat magában foglalja a föld eltávolítását és az
+                                alapozási munkálatokhoz szükséges mélység kialakítását, hogy biztosítsák az épület
+                                stabil és biztonságos alapját.
+                            </p>
+                        </article>
+                        <article class="cellar">
+                            <h3>Pinceszint kiemelés, ásás</h3>
+                            <p>
+                                A pinceszint kiemelés során a föld alatti pince vagy alagsori területet kiemelik, hogy
+                                növeljék az épület belső tereinek magasságát vagy funkcionalitását. Ez a folyamat
+                                magában foglalja a föld eltávolítását a kívánt mélységig, hogy lehetővé tegye az
+                                alagsori terület felhasználását például lakóhelyiségek, tárolók vagy egyéb funkciók
+                                számára.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer></footer>
     </body>
 </html>
