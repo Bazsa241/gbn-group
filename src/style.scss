@@ -52,6 +52,23 @@ body {
     }
 }
 
+.title-bg {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    height: 70vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    h2 {
+        font-size: 3rem;
+        background: rgba(var.$bg-secondary, 0.55);
+        color: var.$font-secondary;
+        backdrop-filter: blur(2px);
+        padding: 0.25rem 1rem;
+    }
+}
+
 @media only screen and (max-width: var.$mobile-size) {
     header.header-down {
         display: flex;
@@ -189,7 +206,7 @@ main {
 //////////////////////////////////////////////////////////////////////////////////////////
 
 .welcome {
-    .title-bg {
+    .main-title-bg {
         background-image: url(./assets/welcome-2.jpg);
         background-position: center;
         background-size: cover;
@@ -275,26 +292,10 @@ main {
 //////////////////////////////////////////////////////////////////////////////////////////
 
 .water-sewer {
-    padding-bottom: 3rem;
-
     .title-bg {
         background-image: url(./assets/kerti-csap.jpg);
         background-position: center;
         background-size: cover;
-        padding-top: 10vh;
-        padding-bottom: 10vh;
-        height: 70vh;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
-
-        h2 {
-            font-size: 3rem;
-            background: rgba(var.$bg-secondary, 0.4);
-            color: var.$font-secondary;
-            backdrop-filter: blur(2px);
-            padding: 0.25rem 1rem;
-        }
     }
 
     .services {
@@ -311,12 +312,6 @@ main {
         background: var.$bg-primary;
         padding: 1rem;
         flex-basis: calc((100% / 4) - 4rem);
-
-        &:hover {
-            scale: 110%;
-            transition: scale 0.2s ease-in-out;
-            z-index: 1;
-        }
 
         &:nth-child(even) {
             transform: translateY(-8rem);
@@ -383,41 +378,67 @@ main {
 //////////////////////////////////////////////////////////////////////////////////////////
 
 .excavation {
-    article {
+    .title-bg {
+        background-image: url('./assets/bobcat-19.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 50vh;
+    }
+
+    .content {
         display: flex;
+        gap: 1rem;
+        padding: 0 1rem;
+        margin-top: 2rem;
+    }
 
-        &:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        &:nth-child(n + 2) {
-            // margin-top: 3rem;
-        }
-
-        .excavation-image {
-            flex-grow: 1;
-            flex-basis: 50%;
-            // background-color: red;
-            background-image: url('./assets/pool-excavation-copy.jpg');
-            background-position: center;
-            background-size: cover;
-        }
-
-        .content {
-            flex-basis: 50%;
-            flex-grow: 1;
-            padding: 5rem 10vw;
-            text-align: center;
-        }
+    article {
+        flex-basis: calc(100% / 3);
+        padding: 1rem;
 
         h3 {
-            font-size: 1.5rem;
-            padding-bottom: 2rem;
+            margin-bottom: 1rem;
             color: var.$harley-davidson-orange;
+            text-align: center;
         }
 
         p {
             line-height: 1.7;
+            text-align: justify;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .title-bg {
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        .content {
+            flex-direction: column;
+        }
+    }
+
+    @media only screen and (max-width: 700px) {
+        .title-bg {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+
+            h2 {
+                text-align: center;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .title-bg {
+            background-position: left;
+            margin-bottom: 2rem;
         }
     }
 }
